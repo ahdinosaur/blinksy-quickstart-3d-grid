@@ -1,0 +1,15 @@
+[package]
+name = "blinksy-quickstart-gledopto"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+blinksy = "0.3"
+
+[target.'cfg(target_arch = "xtensa")'.dependencies]
+esp-hal = "1.0.0-beta.0"
+blinksy-esp = "0.3"
+gledopto = { version = "0.3", features = ["gl_c_016wl_d"] }
+
+[target.'cfg(not(target_arch = "xtensa"))'.dependencies]
+blinksy-desktop = "0.3"

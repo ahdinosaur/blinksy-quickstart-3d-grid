@@ -1,0 +1,16 @@
+[build]
+target = "xtensa-esp32-none-elf"
+
+[target.'cfg(target_arch = "xtensa")']
+runner = "espflash flash --monitor --log-format defmt"
+rustflags = [
+  # Required by esp-backtrace, but may negatively impact code performance
+  "-C", "force-frame-pointers",
+  # Required by defmt
+  "-C", "link-arg=-Tdefmt.x",
+  # Required by esp-hal
+  "-C", "link-arg=-Tlinkall.x",
+]
+
+[unstable]
+build-std = ["core", "alloc"]
