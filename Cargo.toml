@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 blinksy = "0.3"
+cfg-iif = "0.2"
 
 [target.'cfg(target_arch = "xtensa")'.dependencies]
 esp-hal = "1.0.0-beta.0"

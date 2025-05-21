@@ -1,5 +1,5 @@
 [build]
-target = "xtensa-esp32-none-elf"
+# target = "xtensa-esp32-none-elf"
 
 [target.'cfg(target_arch = "xtensa")']
 runner = "espflash flash --monitor --log-format defmt"
