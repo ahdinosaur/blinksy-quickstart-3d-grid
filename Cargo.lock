@@ -129,7 +129,6 @@ version = "0.1.0"
 dependencies = [
  "blinksy",
  "blinksy-desktop",
- "blinksy-esp",
  "cfg-iif",
  "esp-hal",
  "gledopto",
