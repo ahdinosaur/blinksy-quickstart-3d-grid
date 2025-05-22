@@ -1,6 +1,6 @@
 # [Blinksy][blinksy] Quickstart: Gledopto 🌈
 
-Get started with [Blinksy][blinksy] LED control using a Gledopto controller.
+Get started with [Blinksy][blinksy] LED control using a [Gledopto GL-C-016WL-D](https://www.aliexpress.com/item/1005008707989546.html) controller.
 
 https://github.com/user-attachments/assets/d7e08d48-9f22-43b5-afdc-439b4eaefe98
 
@@ -20,6 +20,14 @@ The initial project is setup to run a scrolling rainbow on a 5 meter WS2812 stri
 [patterns]: https://docs.rs/blinksy/0.3/blinksy/patterns/index.html
 [driver]: https://docs.rs/blinksy/0.3/blinksy/driver/index.html
 [drivers]: https://docs.rs/blinksy/0.3/blinksy/drivers/index.html
+
+### How to LED hardware
+
+If you need a LED supplier recommendation, I've only had success with "BTF-Lighting". You can find them on [AliExpress](https://btf-lighting.aliexpress.com/), [Amazon](https://www.amazon.com/stores/BTF-LIGHTING/BTF-LIGHTING/page/0FF60378-45DE-44E7-B0D7-8F5CD6478971), or on [their own website](https://www.btf-lighting.com/).
+
+If you need more help with LED hardware, look at [QuinLED's helpful guides][quinled-guides].
+
+[quinled-guides]: https://quinled.info/addressable-digital-leds/
 
 ## Development
 
