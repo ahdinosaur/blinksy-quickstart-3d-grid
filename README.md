@@ -1,6 +1,6 @@
-# [Blinksy][blinksy] Quickstart: Gledopto
+# [Blinksy][blinksy] Quickstart: Gledopto 🌈
 
-A quickstart project to get started with [Blinksy][blinksy] LED control using a Gledopto controller.
+Get started with [Blinksy][blinksy] LED control using a Gledopto controller.
 
 https://github.com/user-attachments/assets/d7e08d48-9f22-43b5-afdc-439b4eaefe98
 
@@ -27,6 +27,11 @@ The initial project is setup to run a scrolling rainbow on a 5 meter WS2812 stri
 
 - Install Rust with [`rustup`][rustup]
 - Install [`just`][just]
+
+```shell
+cargo install just
+```
+
 - Install [`espup`][espup]
 
 ```shell
@@ -34,7 +39,7 @@ cargo install espup
 espup install
 ```
 
-- Install [`espflash`]
+- Install [`espflash`][espflash]
 
 ```shell
 cargo install espflash
