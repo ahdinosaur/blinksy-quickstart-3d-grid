@@ -85,9 +85,9 @@ checksum = "1b8e56985ec62d17e9c1001dc89c88ecd7dc08e47eba5ec7c29c7b5eeecde967"
 
 [[package]]
 name = "blinksy"
-version = "0.3.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6730d81c092962f6131d29bf50e53ae765734805eb6b62215eeda44a3db34858"
+checksum = "60a54a984d31cc769ebd5c78a1af3f487ad908ef628795cf919c60e01afc1197"
 dependencies = [
  "defmt 0.3.100",
  "embedded-hal 1.0.0",
@@ -101,9 +101,9 @@ dependencies = [
 
 [[package]]
 name = "blinksy-desktop"
-version = "0.3.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6100f17413f08ca3443294f2c167766b1dcd4353e06aed7f5717975e05123b5a"
+checksum = "68f57834eb1350eeaff6b6122f410d0f3f64df246f654e5654b7cddd8ba471fb"
 dependencies = [
  "blinksy",
  "egui",
@@ -114,9 +114,9 @@ dependencies = [
 
 [[package]]
 name = "blinksy-esp"
-version = "0.3.1"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9ef6b745048b5ce96ccfeb10dba1f91c565b0fcebc4fa03222b94078fcc4e26"
+checksum = "dc5803b9499eff59c1cf927ea2ec30632476a2a346b1df03bc6361184d5267ed"
 dependencies = [
  "blinksy",
  "defmt 0.3.100",
@@ -965,9 +965,9 @@ dependencies = [
 
 [[package]]
 name = "gledopto"
-version = "0.3.1"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a0bf9a6984c280177b374d12036872b6d21f30f1250ae8781f697d680f1bba3a"
+checksum = "6c17ef1d3b602920253913f964ff57183a8b77941b69ee41842bf7054f4e1b0c"
 dependencies = [
  "blinksy",
  "blinksy-esp",

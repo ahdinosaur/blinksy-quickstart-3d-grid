@@ -15,11 +15,11 @@ The initial project is setup to run a scrolling rainbow on a 5 meter WS2812 stri
   - The pattern will compute colors for each LED based on its position
 - Setup a [`driver`][driver] to send each frame of colors to your LEDs, using our built-in [`drivers`][drivers] library.
 
-[layout]: https://docs.rs/blinksy/0.3/blinksy/layout/index.html
-[pattern]: https://docs.rs/blinksy/0.3/blinksy/pattern/index.html
-[patterns]: https://docs.rs/blinksy/0.3/blinksy/patterns/index.html
-[driver]: https://docs.rs/blinksy/0.3/blinksy/driver/index.html
-[drivers]: https://docs.rs/blinksy/0.3/blinksy/drivers/index.html
+[layout]: https://docs.rs/blinksy/0.4/blinksy/layout/index.html
+[pattern]: https://docs.rs/blinksy/0.4/blinksy/pattern/index.html
+[patterns]: https://docs.rs/blinksy/0.4/blinksy/patterns/index.html
+[driver]: https://docs.rs/blinksy/0.4/blinksy/driver/index.html
+[drivers]: https://docs.rs/blinksy/0.4/blinksy/drivers/index.html
 
 ### How to LED hardware
 
