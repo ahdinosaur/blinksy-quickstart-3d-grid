@@ -27,6 +27,13 @@ If you need a LED supplier recommendation, I've only had success with "BTF-Light
 
 If you need more help with LED hardware, look at [QuinLED's helpful guides][quinled-guides].
 
+To get started now, buy:
+
+- Gledopto GL-C-016WL-D: [AliExpress](https://www.aliexpress.com/item/1005008707989546.html), [Amazon](https://www.amazon.com/Controller-Dynamic-Lighting-Download-Addressable/dp/B0DT9QM25R)
+- BTF-LIGHTING 360-degree WS2812B LED "Neon Rope": [AliExpress](https://www.aliexpress.com/item/1005006239466933.html), [Amazon](https://www.amazon.com/BTF-LIGHTING-Reticulate-Flexible-Waterproof-Controller/dp/B0CNXKJS6G)
+- A BTF-LIGHTING 5V power supply: [AliExpress](https://www.aliexpress.com/item/32810906485.html)
+  - Power usage depends on brightness and patterns: 5V 3A should be more than enough for 1m and 2m, but more LEDs could use 5V 10A. Please read the [QuinLED power usage](https://quinled.info/2020/03/12/digital-led-power-usage/) guide before blowing up your power supply.
+
 [quinled-guides]: https://quinled.info/addressable-digital-leds/
 
 ## Development
