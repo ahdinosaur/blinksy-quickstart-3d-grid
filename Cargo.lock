@@ -85,25 +85,25 @@ checksum = "1b8e56985ec62d17e9c1001dc89c88ecd7dc08e47eba5ec7c29c7b5eeecde967"
 
 [[package]]
 name = "blinksy"
-version = "0.4.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "60a54a984d31cc769ebd5c78a1af3f487ad908ef628795cf919c60e01afc1197"
+checksum = "0c8c3626ea9d9f2a065b10e7736f606f8a1cdea8cc351a2b19a5218af308b121"
 dependencies = [
  "defmt 0.3.100",
  "embedded-hal 1.0.0",
  "fugit",
  "glam",
  "heapless",
- "noise-fork-nostd",
+ "noise-functions",
  "num-traits",
  "smart-leds-trait",
 ]
 
 [[package]]
 name = "blinksy-desktop"
-version = "0.4.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "68f57834eb1350eeaff6b6122f410d0f3f64df246f654e5654b7cddd8ba471fb"
+checksum = "1dc7c07c4b6af95c67722a96ddbb179db8533aa1010f1f9e1ae9058c6e4281e2"
 dependencies = [
  "blinksy",
  "egui",
@@ -114,9 +114,9 @@ dependencies = [
 
 [[package]]
 name = "blinksy-esp"
-version = "0.4.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc5803b9499eff59c1cf927ea2ec30632476a2a346b1df03bc6361184d5267ed"
+checksum = "ce3a1ab31e6981b49baf0f42442289ec57324320fa193a22e1c922fdf97cb144"
 dependencies = [
  "blinksy",
  "defmt 0.3.100",
@@ -742,7 +742,7 @@ dependencies = [
  "nb 1.1.0",
  "paste",
  "portable-atomic",
- "rand_core 0.6.4",
+ "rand_core",
  "riscv",
  "serde",
  "strum 0.27.1",
@@ -965,9 +965,9 @@ dependencies = [
 
 [[package]]
 name = "gledopto"
-version = "0.4.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c17ef1d3b602920253913f964ff57183a8b77941b69ee41842bf7054f4e1b0c"
+checksum = "fdf1b72070865daddb6e290043f51bc69860d734d64fe581c2395e694bd71489"
 dependencies = [
  "blinksy",
  "blinksy-esp",
@@ -1195,14 +1195,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2bf50223579dc7cdcfb3bfcacf7069ff68243f8c363f62ffa99cf000a6b9c451"
 
 [[package]]
-name = "noise-fork-nostd"
-version = "0.9.0"
+name = "noise-functions"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e0eb27381fa459e4ea14a5d69240e32b48732de5aaeaf0e4a6f6c95199a8d5a3"
+checksum = "3420c74fd988a5c7da54fad9b8dba218f15431833817913d252dc59002c199c5"
 dependencies = [
- "num-traits",
- "rand",
- "rand_xorshift",
+ "libm",
 ]
 
 [[package]]
@@ -1487,34 +1485,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bd7a31eed1591dcbc95d92ad7161908e72f4677f8fabf2a32ca49b4237cbf211"
 
 [[package]]
-name = "rand"
-version = "0.9.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9fbfd9d094a40bf3ae768db9361049ace4c0e04a4fd6b359518bd7b73a73dd97"
-dependencies = [
- "rand_core 0.9.3",
-]
-
-[[package]]
 name = "rand_core"
 version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
-
-[[package]]
-name = "rand_core"
-version = "0.9.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "99d9a13982dcf210057a8a78572b2217b667c3beacbf3a0d8b454f6f82837d38"
-
-[[package]]
-name = "rand_xorshift"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "513962919efc330f829edb2535844d1b912b0fbe2ca165d613e4e8788bb05a5a"
-dependencies = [
- "rand_core 0.9.3",
-]
 
 [[package]]
 name = "redox_syscall"
