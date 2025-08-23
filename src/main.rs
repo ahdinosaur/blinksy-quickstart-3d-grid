@@ -1,6 +1,9 @@
 #![cfg_attr(feature = "mcu", no_std)]
 #![cfg_attr(feature = "mcu", no_main)]
 
+#[cfg(all(feature = "mcu", feature = "desktop"))]
+compile_error!("features \"mcu\" and \"desktop\" are mutually exclusive");
+
 use blinksy::{
     layout1d,
     patterns::rainbow::{Rainbow, RainbowParams},
@@ -10,14 +13,13 @@ use cfg_iif::cfg_iif;
 
 #[cfg(feature = "mcu")]
 use blinksy::layout::Layout1d;
-#[cfg(feature = "mcu")]
-use gledopto::{board, elapsed, main, ws2812};
 
-fn run() {
+#[cfg_attr(feature = "mcu", gledopto::main)]
+fn main() -> ! {
     #[cfg(feature = "mcu")]
-    let p = board!();
+    let p = gledopto::board!();
 
-    layout1d!(Layout, 5 * 60);
+    layout1d!(Layout, 50);
 
     let mut control = ControlBuilder::new_1d()
         .with_layout::<Layout>()
@@ -27,7 +29,7 @@ fn run() {
         })
         .with_driver(cfg_iif!(
             #[cfg(feature = "mcu")] {
-                ws2812!(p, Layout::PIXEL_COUNT)
+                gledopto::ws2812!(p, Layout::PIXEL_COUNT)
             } else {
                 blinksy_desktop::driver::Desktop::new_1d::<Layout>()
             }
@@ -43,21 +45,9 @@ fn run() {
 
     loop {
         let elapsed_in_ms = cfg_iif!(
-            #[cfg(feature = "mcu")] { elapsed().as_millis() }
+            #[cfg(feature = "mcu")] { gledopto::elapsed().as_millis() }
             else { blinksy_desktop::time::elapsed_in_ms() }
         );
         control.tick(elapsed_in_ms).unwrap();
     }
-}
-
-#[cfg(feature = "mcu")]
-#[main]
-fn main() -> ! {
-    run();
-    loop {}
-}
-
-#[cfg(feature = "desktop")]
-fn main() {
-    run();
 }
