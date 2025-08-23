@@ -1,10 +1,10 @@
-# [Blinksy][blinksy] Quickstart: Gledopto 🌈
+# [Blinksy][blinksy] Quickstart: 1D Rope 🌈
 
-Get started with [Blinksy][blinksy] LED control using a [Gledopto GL-C-016WL-D](https://www.aliexpress.com/item/1005008707989546.html) controller.
+Get started with [Blinksy][blinksy] LED control using a [Gledopto GL-C-016WL-D](https://www.aliexpress.com/item/1005008707989546.html) controller and [BTF-Lighting LED rope](https://www.aliexpress.com/item/1005006239466933.html)
 
 https://github.com/user-attachments/assets/d7e08d48-9f22-43b5-afdc-439b4eaefe98
 
-The initial project is setup to run a scrolling rainbow on a 5 meter WS2812 strip of 60 LEDs/meter.
+The initial project is setup to run a scrolling rainbow on a 1 meter WS2812B strip of 50 LEDs/meter.
 
 ## [How Blinksy works][how-blinksy-works]
 
@@ -25,14 +25,14 @@ The initial project is setup to run a scrolling rainbow on a 5 meter WS2812 stri
 
 If you need a LED supplier recommendation, I've only had success with "BTF-Lighting". You can find them on [AliExpress](https://btf-lighting.aliexpress.com/), [Amazon](https://www.amazon.com/stores/BTF-LIGHTING/BTF-LIGHTING/page/0FF60378-45DE-44E7-B0D7-8F5CD6478971), or on [their own website](https://www.btf-lighting.com/).
 
-If you need more help with LED hardware, look at [QuinLED's helpful guides][quinled-guides].
-
 To get started now, buy:
 
 - Gledopto GL-C-016WL-D: [AliExpress](https://www.aliexpress.com/item/1005008707989546.html), [Amazon](https://www.amazon.com/Controller-Dynamic-Lighting-Download-Addressable/dp/B0DT9QM25R)
 - BTF-LIGHTING 360-degree WS2812B LED "Neon Rope": [AliExpress](https://www.aliexpress.com/item/1005006239466933.html), [Amazon](https://www.amazon.com/BTF-LIGHTING-Reticulate-Flexible-Waterproof-Controller/dp/B0CNXKJS6G)
 - A BTF-LIGHTING 5V power supply: [AliExpress](https://www.aliexpress.com/item/32810906485.html)
-  - Power usage depends on brightness and patterns: 5V 3A should be more than enough for 1m and 2m, but more LEDs could use 5V 10A. Please read the [QuinLED power usage](https://quinled.info/2020/03/12/digital-led-power-usage/) guide before blowing up your power supply.
+  - Power usage depends on brightness and patterns: 5V 3A should be more than enough for 1m and 2m, but more LEDs could use 5V 10A. Please read the [QuinLED power usage](https://quinled.info/2020/03/12/digital-led-power-usage/) guide before blowing up your power supply. Blinksy does not protect you here, [yet](https://github.com/ahdinosaur/blinksy/issues/47).
+
+If you need more help with LED hardware, look at [QuinLED's helpful guides][quinled-guides].
 
 [quinled-guides]: https://quinled.info/addressable-digital-leds/
 
@@ -92,7 +92,7 @@ just desktop
 
 ## Resources
 
-- [`blinksy`][blinksy]: Rust _no-std_ _no-alloc_  LED control library for 1D, 2D, and soon 3D LED setups
+- [`blinksy`][blinksy]: Rust _no-std_ _no-alloc_  LED control library for 1D, 2D, and 3D LED setups
 - [`gledopto`][gledopto]: Board support crate for Gledopto ESP32 Digital LED controllers
 
 [blinksy]: https://github.com/ahdinosaur/blinksy
