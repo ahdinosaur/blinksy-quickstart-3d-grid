@@ -4,15 +4,15 @@
 #[cfg(all(feature = "mcu", feature = "desktop"))]
 compile_error!("features \"mcu\" and \"desktop\" are mutually exclusive");
 
-use blinksy::{
-    layout1d,
-    patterns::rainbow::{Rainbow, RainbowParams},
-    ControlBuilder,
-};
+use blinksy::{layout1d, ControlBuilder};
 use cfg_iif::cfg_iif;
 
 #[cfg(feature = "mcu")]
 use blinksy::layout::Layout1d;
+
+mod patterns;
+
+use crate::patterns::rainbow::{Rainbow, RainbowParams};
 
 #[cfg_attr(feature = "mcu", gledopto::main)]
 fn main() -> ! {
@@ -24,7 +24,6 @@ fn main() -> ! {
     let mut control = ControlBuilder::new_1d()
         .with_layout::<Layout>()
         .with_pattern::<Rainbow>(RainbowParams {
-            position_scalar: 1.,
             ..Default::default()
         })
         .with_driver(cfg_iif!(
