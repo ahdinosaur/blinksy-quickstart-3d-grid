@@ -1,7 +1,7 @@
 use blinksy::{
     color::{Hsv, HsvHueRainbow},
-    dimension::Dim1d,
-    layout::Layout1d,
+    dimension::Dim3d,
+    layout::Layout3d,
     pattern::Pattern,
 };
 
@@ -18,8 +18,8 @@ impl Default for RainbowParams {
     fn default() -> Self {
         const MILLISECONDS_PER_SECOND: f32 = 1e3;
         Self {
-            rainbow_speed: 0.3 / MILLISECONDS_PER_SECOND,
-            rainbow_zoom: 1.,
+            rainbow_speed: 0.1 / MILLISECONDS_PER_SECOND,
+            rainbow_zoom: 0.25,
         }
     }
 }
@@ -33,9 +33,9 @@ pub struct Rainbow {
     params: RainbowParams,
 }
 
-impl<Layout> Pattern<Dim1d, Layout> for Rainbow
+impl<Layout> Pattern<Dim3d, Layout> for Rainbow
 where
-    Layout: Layout1d,
+    Layout: Layout3d,
 {
     type Params = RainbowParams;
     type Color = Hsv<HsvHueRainbow>;
@@ -59,8 +59,8 @@ where
         let rainbow_time = time_in_ms as f32 * rainbow_speed;
         let rainbow_step = 0.5 * rainbow_zoom;
 
-        Layout::points().map(move |x| {
-            let hue = x * rainbow_step + rainbow_time;
+        Layout::points().map(move |point| {
+            let hue = (point.x + point.y + point.z) * rainbow_step + rainbow_time;
             let saturation = 1.;
             let value = 1.;
             Hsv::new(hue, saturation, value)

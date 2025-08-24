@@ -4,14 +4,16 @@
 #[cfg(all(feature = "mcu", feature = "desktop"))]
 compile_error!("features \"mcu\" and \"desktop\" are mutually exclusive");
 
-use blinksy::{layout1d, ControlBuilder};
+use blinksy::ControlBuilder;
 use cfg_iif::cfg_iif;
 
 #[cfg(feature = "mcu")]
-use blinksy::layout::Layout1d;
+use blinksy::layout::Layout3d;
 
+mod layout;
 mod patterns;
 
+use crate::layout::Layout;
 use crate::patterns::rainbow::{Rainbow, RainbowParams};
 
 #[cfg_attr(feature = "mcu", gledopto::main)]
@@ -19,9 +21,7 @@ fn main() -> ! {
     #[cfg(feature = "mcu")]
     let p = gledopto::board!();
 
-    layout1d!(Layout, 50);
-
-    let mut control = ControlBuilder::new_1d()
+    let mut control = ControlBuilder::new_3d()
         .with_layout::<Layout>()
         .with_pattern::<Rainbow>(RainbowParams {
             ..Default::default()
@@ -30,7 +30,7 @@ fn main() -> ! {
             #[cfg(feature = "mcu")] {
                 gledopto::ws2812!(p, Layout::PIXEL_COUNT)
             } else {
-                blinksy_desktop::driver::Desktop::new_1d::<Layout>()
+                blinksy_desktop::driver::Desktop::new_3d::<Layout>()
             }
         ))
         .build();
