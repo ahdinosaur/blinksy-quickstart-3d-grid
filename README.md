@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/f320d1e9-5a05-424c-b64f-a529151e9847
 
 The initial project is setup to run a scrolling rainbow on a 5x5x5 WS2812B cube.
 
-(If you want to start with a 1D LED rope instead, see [`blinksy-quickstart-1d-rope`](https://github.com/ahdinosaur/blinksy-quickstart-3d-grid)).
+(If you want to start with a 1D LED rope instead, see [`blinksy-quickstart-1d-rope`](https://github.com/ahdinosaur/blinksy-quickstart-1d-rope)).
 
 ## Bill of Materials
 
