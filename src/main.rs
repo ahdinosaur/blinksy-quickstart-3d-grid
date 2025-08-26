@@ -10,6 +10,9 @@ use cfg_iif::cfg_iif;
 #[cfg(feature = "mcu")]
 use blinksy::layout::Layout3d;
 
+#[cfg(feature = "mcu")]
+gledopto::bootloader!();
+
 mod layout;
 mod patterns;
 
